@@ -1,0 +1,375 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<head lang="en">
+	<meta http-equiv="content-type" content="text/html;charset=utf-8">
+	<title>Template Documentation Template</title>
+	<!-- Framework CSS -->
+	<link rel="stylesheet" href="assets/blueprint-css/screen.css" type="text/css" media="screen, projection">
+	<link rel="stylesheet" href="assets/blueprint-css/print.css" type="text/css" media="print">
+	<!--[if lt IE 8]><link rel="stylesheet" href="assets/blueprint-css/ie.css" type="text/css" media="screen, projection"><![endif]-->
+	<link rel="stylesheet" href="assets/blueprint-css/plugins/fancy-type/screen.css" type="text/css" media="screen, projection">
+	<style type="text/css" media="screen">
+		p, table, hr, .box { margin-bottom:25px; }
+		.box p { margin-bottom:10px; }
+	</style>
+</head>
+
+
+<body>
+	<div class="container">
+	
+		<h3 class="center alt">&ldquo;Mutant Portfolio Template&rdquo; Documentation by &ldquo;Ashiqur Rahman Tusher&rdquo; v1.0</h3>
+		
+		<hr>
+		
+		<h1 class="center">&ldquo;Mutant Portfolio Template&rdquo;</h1>
+		
+		<div class="borderTop">
+			<div class="span-6 colborder info prepend-1">
+				<p class="prepend-top">
+					<strong>
+					Created: 1/9/2017<br>
+					By: Ashiqur Rahman Tusher<br>
+					Email: <a href="mailto:ashikurt77@gmail.com">ashikurt77@gmail.com</a>
+					</strong>
+				</p>
+			</div><!-- end div .span-6 -->		
+	
+			<div class="span-12 last">
+				<p class="prepend-top append-0">Thank you for purchasing my template. If you have any questions that are beyond the scope of this help file, please feel free to email via my user page contact form <a href="http://themeforest.net/user/ashikurt">here</a>. Thanks so much!</p>
+			</div>
+		</div><!-- end div .borderTop -->
+		
+		<hr>
+		
+		<h2 id="toc" class="alt">Table of Contents</h2>
+		<ol class="alpha">
+			<li><a href="#htmlStructure">HTML Structure</a></li>
+			<li><a href="#cssFiles">CSS Files and Structure</a></li>
+			<li><a href="#javascript">JavaScript</a></li>
+			<li><a href="#credits">Sources and Credits</a></li>
+		</ol>
+		
+		<hr>
+		
+		<h3 id="htmlStructure"><strong>A) HTML Structure</strong> - <a href="#toc">top</a></h3>
+		<p>This template is a single page responsive design using Bootsrap. Mutant Portfolio Template has three variations:
+		<ul>
+			<li><b>Default Version :</b> Single image background in home section.</li>
+			<li><b>Slideshow Version :</b> Background image slideshow in home section.</li>
+			<li><b>Particle Version :</b> Animated particle overlay in the background in home section.</li>
+		</ul>
+		You will find the main content of this template in "mutant" folder:
+		</p>
+		<img src="assets/images/content.JPG" alt="content">
+
+		<p>
+		Open <b>index-default.html</b> to access the default version. <br>
+		Open <b>index-slideshow.html</b> to access the slideshow version. <br>
+		Open <b>index-particle.html</b> to access the particle version. <br>
+		</p>
+
+		<p>Upload the whole contents of the mutant folder to the web hosting server and keep the desired version's index file and rename it to <b>index.html</b> and delete the other two versions index file. For example, if you want to use the default version, rename the <b>index-default.index</b> file to <b>index.html</b>. Then delete the index files of other two versions, <b>index-slideshow.html</b> and <b>index-particle.html</b> .</p> 
+
+		<p>All of the information within the main content area is nested within a div with a class of "all-container". All the sections are nested within this "all-container" classed div with unique class names(i.e header,menu,about-me,services,portfolio,testimonials,contact). <strong>Do not edit the class names</strong>, if you have to, make sure that you change the respective class name in the main.css, responsive.css and main.js files. Basic HTML structure looks like this:</p>
+<pre>
+&#x3C;!DOCTYPE html&#x3E;
+&#x3C;html lang=&#x22;en&#x22; class=&#x22;no-js&#x22;&#x3E;
+
+<b style="color: red">Adds preloader animation:</b> 
+&#x3C;div id=&#x22;preloader&#x22;&#x3E;&#x3C;/div&#x3E;
+
+<b style="color: red">Holds all the visible contents of the website:</b> 
+&#x3C;div class=&#x22;all-container&#x22;&#x3E;
+
+<b style="color: red">Contains header section:</b> 
+ &#x3C;div class=&#x22;header section&#x22; id=&#x22;1&#x22;&#x3E;
+  content
+ &#x3C;/div&#x3E;
+
+<b style="color: red">Contains menu section:</b> 
+ &#x3C;div class=&#x22;menu section&#x22; id=&#x22;2&#x22;&#x3E;
+  content
+ &#x3C;/div&#x3E;
+
+<b style="color: red">Contains About-me section:</b> 
+ &#x3C;div class=&#x22;about-me&#x22; section&#x22; id=&#x22;3&#x22;&#x3E;
+  content
+ &#x3C;/div&#x3E;
+
+<b style="color: red">Contains Services section:</b> 
+ &#x3C;div class=&#x22;services&#x22; section&#x22; id=&#x22;4&#x22;&#x3E;
+  content
+ &#x3C;/div&#x3E;
+
+<b style="color: red">Contains Portfolio section:</b> 
+ &#x3C;div class=&#x22;portfolio&#x22; section&#x22; id=&#x22;5&#x22;&#x3E;
+  content
+ &#x3C;/div&#x3E;
+
+<b style="color: red">Contains Testimonial section:</b> 
+ &#x3C;div class=&#x22;testimonials&#x22; section&#x22; id=&#x22;6&#x22;&#x3E;
+  content
+ &#x3C;/div&#x3E;
+
+<b style="color: red">Contains Contact section:</b> 
+ &#x3C;div class=&#x22;contacts&#x22; section&#x22; id=&#x22;5&#x22;&#x3E;
+  content
+ &#x3C;/div&#x3E;
+
+<b style="color: red">Adds to the top button:</b> 
+ &#x3C;a href=&#x22;#1&#x22; class=&#x22;scroll-up hvr-icon-up&#x22;&#x3E;&#x3C;/a&#x3E;
+
+&#x3C;/div&#x3E;
+&#x3C;/html&#x3E;
+</pre>
+		
+		<p> <strong>To change the website title,favicon and meta-data</strong>, you would head over to the head tag and edit the content within the respective tag:</p>
+		
+<pre>
+<b style="color: red">Change website title here:</b> 
+&#x3C;title&#x3E; Mutant Portfolio Template &#x3C;/title&#x3E;
+
+<b style="color: red">Change website favicon here:</b> 
+&#x3C;link rel=&#x22;icon&#x22; type=&#x22;image/png&#x22; href=&#x22;image/favicon/favicon.png&#x22;&#x3E;
+
+</pre>
+		<p>There are 2 version of logo used in this template - Light version for dark backgrond and Dark version for light background. You can add your logo or delete them here: </p>
+<pre>
+<b style="color: red">Use light version of logo here:</b> 
+&#x3C;div class=&#x22;header section&#x22; id=&#x22;1&#x22;&#x3E; 
+  &#x3C;div class=&#x22;logo&#x22;&#x3E;
+    &#x3C;img src=&#x22;image/logo/logo.png&#x22; alt=&#x22;Logo&#x22;&#x3E;
+  &#x3C;/div&#x3E;
+&#x3C;/div&#x3E;
+
+<b style="color: red">Use dark version of logo here:</b> 
+&#x3C;div class=&#x22;menu&#x22; id=&#x22;menu&#x22;&#x3E;
+ &#x3C;div class=&#x22;mobile-menu-logo&#x22;&#x3E;&#x3C;a href=&#x22;#&#x22;&#x3E;&#x3C;img src=&#x22;image/logo/logo-dark.png&#x22; alt=&#x22;Logo&#x22;&#x3E;&#x3C;/a&#x3E;&#x3C;/div&#x3E;
+&#x3C;/div&#x3E;
+</pre>
+		<p>You can use a single logo for both the version if you want.</p>
+
+		<p> <b>To change the animated text,</b> find "cd-headline" classed element in the header section. Then change the content within the &#x3C;b&#x3E; tag. There are total two animated texts in this template.</p>
+<pre>
+<b style="color: red">Change the content of animated text here:</b> 
+&#x3C;strong class=&#x22;cd-headline clip&#x22;&#x3E;
+   &#x3C;span class=&#x22;cd-words-wrapper&#x22;&#x3E;
+    &#x3C;b class=&#x22;is-visible&#x22;&#x3E;Web Developer&#x3C;/b&#x3E;
+    &#x3C;b&#x3E;Graphic Designer&#x3C;/b&#x3E;
+    &#x3C;b&#x3E;Photographer&#x3C;/b&#x3E;
+   &#x3C;/span&#x3E;
+ &#x3C;/strong&#x3E;
+&#x3C;/div&#x3E;
+</pre>
+		<p> <strong>To change the images for background slideshow</strong> in <b>Slideshow</b> version, edit the image file sources here: </p>
+<pre>
+<b style="color: red">Change the images for background images here(In slideshow version only):</b> 
+&#x3C;div class=&#x22;header section&#x22; id=&#x22;1&#x22;&#x3E;
+&#x3C;div class=&#x22;owl-carousel owl-full-width owl-theme&#x22; id=&#x22;background-slide&#x22;&#x3E;
+ &#x3C;div class=&#x22;slider slider-1&#x22;&#x3E;&#x3C;img src=&#x22;image/Slider/slider-1.jpg&#x22; alt=&#x22;slider-1&#x22;&#x3E;&#x3C;/div&#x3E;
+ &#x3C;div class=&#x22;slider slider-2&#x22;&#x3E;&#x3C;img src=&#x22;image/Slider/slider-2.jpg&#x22; alt=&#x22;slider-2&#x22;&#x3E;&#x3C;/div&#x3E;
+ &#x3C;div class=&#x22;slider slider-3&#x22;&#x3E;&#x3C;img src=&#x22;image/Slider/slider-3.jpg&#x22; alt=&#x22;slider-3&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;/div&#x3E;
+&#x3C;/div&#x3E;
+</pre>
+		<p>
+			There are total three menus in this template:
+			<ul>
+				<li>Desktop Menu</li>
+				<li>Mobile Menu</li>
+				<li>Fullscreen Menu</li>
+			</ul>
+			<strong>To change the menu</strong>, do the following:
+		</p>
+<pre>
+<b style="color: red">Change the fullscreen menu here:</b> 
+&#x3C;div class=&#x22;header section&#x22; id=&#x22;1&#x22;&#x3E;
+ &#x3C;div class=&#x22;fulscreen-nav&#x22;&#x3E;
+   &#x3C;div class=&#x22;fullscreen-nav-holder&#x22;&#x3E;
+     &#x3C;div&#x3E;&#x3C;a href=&#x22;#1&#x22; class=&#x22;turn-home&#x22;&#x3E;HOME&#x3C;/a&#x3E;&#x3C;/div&#x3E;
+     &#x3C;div&#x3E;&#x3C;a href=&#x22;#2&#x22;&#x3E;ABOUT ME&#x3C;/a&#x3E;&#x3C;/div&#x3E;
+     &#x3C;div&#x3E;&#x3C;a href=&#x22;#3&#x22;&#x3E;SERVICES&#x3C;/a&#x3E;&#x3C;/div&#x3E;
+     &#x3C;div&#x3E;&#x3C;a href=&#x22;#4&#x22;&#x3E;PORTFOLIO&#x3C;/a&#x3E;&#x3C;/div&#x3E;
+     &#x3C;div&#x3E;&#x3C;a href=&#x22;#5&#x22;&#x3E;TESTIMONIALS&#x3C;/a&#x3E;&#x3C;/div&#x3E;
+     &#x3C;div&#x3E;&#x3C;a href=&#x22;#6&#x22;&#x3E;CONTACT&#x3C;/a&#x3E;&#x3C;/div&#x3E;
+   &#x3C;/div&#x3E;
+  &#x3C;/div&#x3E;
+&#x3C;/div&#x3E;
+
+<b style="color: red">Change the Desktop menu here:</b> 
+&#x3C;div class=&#x22;menu&#x22; id=&#x22;menu&#x22;&#x3E;
+&#x3C;div class=&#x22;desktop-menu&#x22; id=&#x22;desktop-menu&#x22;&#x3E;
+  &#x3C;div class=&#x22;menu-item hvr-underline-from-left 1&#x22;&#x3E;&#x3C;a href=&#x22;#1&#x22;&#x3E;Home&#x3C;/a&#x3E;&#x3C;/div&#x3E;
+  &#x3C;div class=&#x22;menu-item hvr-underline-from-left 2&#x22;&#x3E;&#x3C;a href=&#x22;#2&#x22;&#x3E;About Me&#x3C;/a&#x3E;&#x3C;/div&#x3E;
+  &#x3C;div class=&#x22;menu-item hvr-underline-from-left 3&#x22;&#x3E;&#x3C;a href=&#x22;#3&#x22;&#x3E;Services&#x3C;/a&#x3E;&#x3C;/div&#x3E;
+  &#x3C;div class=&#x22;menu-item hvr-underline-from-left 4&#x22;&#x3E;&#x3C;a href=&#x22;#4&#x22;&#x3E;Portfolio&#x3C;/a&#x3E;&#x3C;/div&#x3E;
+  &#x3C;div class=&#x22;menu-item hvr-underline-from-left 5&#x22;&#x3E;&#x3C;a href=&#x22;#5&#x22;&#x3E;Testimonials&#x3C;/a&#x3E;&#x3C;/div&#x3E;
+  &#x3C;div class=&#x22;menu-item hvr-underline-from-left 6&#x22;&#x3E;&#x3C;a href=&#x22;#6&#x22;&#x3E;Contact&#x3C;/a&#x3E;&#x3C;/div&#x3E;
+&#x3C;/div&#x3E;
+&#x3C;/div&#x3E;
+
+<b style="color: red">Change the Mobile menu here:</b> 
+&#x3C;div class=&#x22;menu&#x22; id=&#x22;menu&#x22;&#x3E;
+&#x3C;ul class=&#x22;mobile-menu-list&#x22;&#x3E;
+  &#x3C;li class=&#x22;hvr-shutter-out-vertical mobile-menu-item 1&#x22;&#x3E;&#x3C;a href=&#x22;#1&#x22;&#x3E;Home&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+  &#x3C;li class=&#x22;hvr-shutter-out-vertical mobile-menu-item 2&#x22;&#x3E;&#x3C;a href=&#x22;#2&#x22;&#x3E;About Me&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+  &#x3C;li class=&#x22;hvr-shutter-out-vertical mobile-menu-item 3&#x22;&#x3E;&#x3C;a href=&#x22;#3&#x22;&#x3E;Services&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+  &#x3C;li class=&#x22;hvr-shutter-out-vertical mobile-menu-item 4&#x22;&#x3E;&#x3C;a href=&#x22;#4&#x22;&#x3E;Portfolio&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+  &#x3C;li class=&#x22;hvr-shutter-out-vertical mobile-menu-item 5&#x22;&#x3E;&#x3C;a href=&#x22;#5&#x22;&#x3E;Testimonials&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+  &#x3C;li class=&#x22;hvr-shutter-out-vertical mobile-menu-item 6&#x22;&#x3E;&#x3C;a href=&#x22;#6&#x22;&#x3E;Contact&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+&#x3C;/ul&#x3E;
+&#x3C;/div&#x3E;
+</pre>
+		
+		<p><strong>To change the data of skill bar</strong>, change the data-attribute of the div classed "skillbar" to any number between 1 to 100, it will animate the skill bar to the respective number.</p>
+		<hr>
+<pre>
+<b style="color: red">Change the Skill bars here:</b> 
+&#x3C;div class=&#x22;about-me section&#x22; id=&#x22;2&#x22;&#x3E;
+&#x3C;div class=&#x22;skill-progress-bar&#x22;&#x3E;
+  &#x3C;div class=&#x22;clearfix&#x22;&#x3E;
+    &#x3C;span class=&#x22;skillbar-title&#x22;&#x3E;Web Development&#x3C;/span&#x3E; 
+    &#x3C;span class=&#x22;skill-bar-percent&#x22;&#x3E;98%&#x3C;/span&#x3E;
+    &#x3C;div class=&#x22;skillbar&#x22; data-percent=&#x22;98%&#x22;&#x3E;
+    &#x3C;div class=&#x22;skillbar-bar first-skill&#x22;&#x3E;&#x3C;/div&#x3E;
+  &#x3C;/div&#x3E;
+&#x3C;/div&#x3E;
+&#x3C;/div&#x3E;
+</pre>
+		
+		<p> This template uses <a href="http://yiotis.net/filterizr">Filterizr</a> jQuery plugin to set up the filtering system of the portfolio. Visit <a href="http://yiotis.net/filterizr">here</a> to find out how to set up a custom filtering system.</p>
+
+		<p>This template has pre-configured validation system for the form in the contact section. It will recquire the name and email field with the validation of email.</p>
+
+		<h3 id="cssFiles"><strong>B) CSS Files and Structure</strong> - <a href="#toc">top</a></h3>
+
+		<p>
+		I'm using two CSS files dedicated to style this template. You can find all the CSS files in the "css" folder withing the "mutant" folder.
+		<ul>
+			<li><b>main.css :</b> To style the template.</li>
+			<li><b>responsive.css :</b> To style the template in small screen devices</li>
+		</ul>
+<pre>
+<b style="color: red">Main CSS files of this template:</b> 
+&#x3C;link rel=&#x22;stylesheet&#x22; type=&#x22;text/css&#x22; href=&#x22;css/main.css&#x22;/&#x3E;
+&#x3C;link rel=&#x22;stylesheet&#x22; type=&#x22;text/css&#x22; href=&#x22;css/responsive.css&#x22;&#x3E;
+</pre>
+		Along with these two css files, there are some css files in this template that came along with some plugins and its mandatory that they stay. The list of the css files:
+		<ul>
+			<li><b>bootstrap.min.css</b></li>
+			<li><b>font-awesome.min.css</b></li>
+			<li><b>hover.css</b></li>
+			<li><b>loaders.min.css</b></li>
+			<li><b>owl.carousel.min.css</b></li>
+			<li><b>owl.theme.default.min.css</b></li>
+			<li><b>text-animation.css</b></li>
+			<li><b>magnific-popup.css</b></li>
+		</ul>
+<pre>
+<b style="color: red">CSS files for plugins:</b> 
+&#x3C;link href=&#x22;css/bootstrap.min.css&#x22; rel=&#x22;stylesheet&#x22;&#x3E;
+&#x3C;link rel=&#x22;stylesheet&#x22; type=&#x22;text/css&#x22; href=&#x22;css/font-awesome.min.css&#x22;&#x3E;
+&#x3C;link rel=&#x22;stylesheet&#x22; href=&#x22;css/hover.css&#x22;/&#x3E;
+&#x3C;link rel=&#x22;stylesheet&#x22; type=&#x22;text/css&#x22; href=&#x22;css/loaders.min.css&#x22;&#x3E;
+&#x3C;link rel=&#x22;stylesheet&#x22; href=&#x22;css/magnific-popup.css&#x22;&#x3E;
+&#x3C;link rel=&#x22;stylesheet&#x22; href=&#x22;css/owl.carousel.min.css&#x22;&#x3E;
+&#x3C;link rel=&#x22;stylesheet&#x22; href=&#x22;css/owl.theme.default.min.css&#x22;&#x3E;
+&#x3C;link rel=&#x22;stylesheet&#x22; href=&#x22;css/text-animation.css&#x22;&#x3E;
+</pre>
+		</p> 
+		
+		<p>I am using two fonts in this template- <b>Asap</b> and <b>Josefin Sans</b>. Both fonts are free and included through cdn link.</p>
+<pre>
+<b style="color: red">Fonts here:</b> 
+&#x3C;link href=&#x22;https://fonts.googleapis.com/css?family=Asap:400,500,700%7CJosefin+Sans:400,600,700&#x22; rel=&#x22;stylesheet&#x22;&#x3E;
+</pre>
+		<p>
+		<b>main.css</b> and <b>resonsive.css</b> are all the files you will be needing to change the design of this template. This two files have the same structure:
+<pre>
+<b style="color: red">Structure of main.css and responsive.css:</b> 
+/*--------------------------------
+   1. Start of a section
+----------------------------------*/
+body{
+	style:value;
+}
+/*--------------------------------
+   1. End of a section
+----------------------------------*/
+</pre>
+		</p>
+
+		<p>CSS files are indexed into sections. You can find the index lebel at the top of the file.If you would like to edit a specific section of the site, simply find the appropriate label in the CSS file, and then scroll down until you find the appropriate style that needs to be edited.</p> 
+		
+		<p> Background image of header section, services section and contact section can be changed in the main.css file by scrolling in the respective section. </p>
+
+		<hr>
+		
+		<h3 id="javascript"><strong>C) JavaScript</strong> - <a href="#toc">top</a></h3>
+		
+		<p>This template has a custom script file <b>main.js</b> dedicated to this site. Along with that, I am using some other jQuery plugins to function this site properly. You can find all the javascript files in the "js" folder within the "mutant" folder. Javascript files used in this template: </p>
+		
+		<ol>
+			<li><b>main.js</b></li>
+			<li><b>Plugins</b>
+				<ul>
+					<li><b>modernizr-custom.js</b></li>
+					<li><b>jquery-3.2.1.min.js</b></li>
+					<li><b>wow.min.js</b></li>
+					<li><b>text-animation.js</b></li>
+					<li><b>jquery.waypoints.min.js</b></li>
+					<li><b>jquery.filterizr.min.js</b></li>
+					<li><b>jquery.magnific-popup.min.js</b></li>
+					<li><b>owl.carousel.min.js</b></li>
+					<li><b>countUp.min.js</b></li>
+					<li><b>validator.min.js</b></li>
+					<li><b>js/bootstrap.min.js</b></li>
+				</ul>
+			</li>
+		</ol>
+		  
+		<p> All the scripts regarding this site includes in main.js file. This file is indexed into sections. Structure of main.js file: </p>
+<pre>
+<b style="color: red">Structure of main.js file:</b>
+/*--------------------------------
+    1. Start Section
+----------------------------------*/
+some code
+/*--------------------------------
+    1. End Section
+----------------------------------*/
+</pre> 
+		
+		<p>To edit certain script of certain section, just scroll down to the section labelled with the section name and find the scripts.</p>
+		
+		<hr>
+		
+		<h3 id="credits"><strong>D) Sources and Credits</strong> - <a href="#toc">top</a></h3>
+		
+		<p>This template does not come with images, the images I used were open source and found in <a href="https://pixabay.com/">Pixabay</a>.</p>
+		
+		<p>I have used following plugins:</p>
+		<ul>
+			<li><a href="http://ianlunn.github.io/Hover/">Hover.css</a></li>
+			<li><a href="https://modernizr.com/">Mordernizr.js</a></li>
+			<li><a href="http://www.responsivejs.com/">Respond.js</a></li>
+			<li><a href="https://wowjs.uk/">Wow.js</a></li>
+			<li><a href="http://imakewebthings.com/waypoints/">Waypoints.js</a></li>
+			<li><a href="http://yiotis.net/filterizr/">Filterizr.js</a></li>
+			<li><a href="http://dimsemenov.com/plugins/magnific-popup">Magnific Popup.js</a></li>
+			<li><a href="https://owlcarousel2.github.io/OwlCarousel2/">Owl-Carousel.js</a></li>
+			<li><a href="https://inorganik.github.io/countUp.js/">Countup.js</a></li>
+			<li><a href="http://getbootstrap.com/">Bootstrap</a></li>
+		</ul>
+		
+		<hr>
+		
+		<p>Once again, thank you so much for purchasing this template. As I said at the beginning, I'd be glad to help you if you have any questions relating to this template. No guarantees, but I'll do my best to assist. If you have a more general question relating to the templates on ThemeForest, you might consider visiting the forums and asking your question in the "Item Discussion" section.</p> 
+		
+		<p class="append-bottom alt large"><strong>Ashiqur Rahman Tusher</strong></p>
+		<p><a href="#toc">Go To Table of Contents</a></p>
+		
+		<hr class="space">
+	</div><!-- end div .container -->
+</body>
+</html>
